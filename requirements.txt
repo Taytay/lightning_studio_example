@@ -1,0 +1,2 @@
+-r lit-gpt/requirements.txt
+# lightning @ git+https://github.com/Lightning-AI/lightning@master
