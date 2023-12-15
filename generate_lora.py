@@ -10,12 +10,13 @@ import lora
 
 def generate(
     model_name: str = "mistralai/Mistral-7B-v0.1",
+    lora_path = "out/lora/alpaca/lit_model_lora_finetuned.pth",
     prompt: str = ""
 ):
     lora.main(
         prompt = prompt,
         checkpoint_dir = Path("llm-finetune/lit-gpt/checkpoints") / model_name,
-        lora_path = Path("out/lora/dolly/lit_model_lora_finetuned.pth"),
+        lora_path = Path(lora_path),
         precision = "bf16-true",
         quantize = "bnb.nf4",
     )
